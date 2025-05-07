@@ -1,6 +1,6 @@
-# FastAPI Project
+# Toolbox API
 
-A simple FastAPI project template with basic setup.
+A simple text processing service that accepts text input and responds with a specific message.
 
 ## Setup
 
@@ -21,9 +21,25 @@ A simple FastAPI project template with basic setup.
 uvicorn app.main:app --reload
 ```
 
-Visit http://127.0.0.1:8000 in your browser.
+## API Endpoints
+
+### Process Text
+- **URL**: `/process`
+- **Method**: `POST`
+- **Request Body**:
+  ```json
+  {
+    "text": "your text here (1-100 characters)"
+  }
+  ```
+- **Response**:
+  ```json
+  {
+    "response": "Hi I'm your toolbox agent"
+  }
+  ```
 
 ## API Documentation
 
-- Swagger UI: http://127.0.0.1:8000/docs
-- ReDoc: http://127.0.0.1:8000/redoc
+- **Swagger UI**: http://127.0.0.1:8000/docs
+- **ReDoc**: http://127.0.0.1:8000/redoc
